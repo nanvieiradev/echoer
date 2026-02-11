@@ -1,9 +1,12 @@
+import { FaLinkedin } from "react-icons/fa"
+import { FaGithub } from "react-icons/fa"
+
 export default function NavbarSocial() {
   return (
     <nav className="flex space-x-6">
-      <button className="bg-black rounded-sm w-6 h-6 cursor-pointer"></button>
-      <button className="bg-black rounded-sm w-6 h-6 cursor-pointer"></button>
-      <button className="bg-black rounded-sm w-6 h-6 cursor-pointer"></button>
+      <FaLinkedin className="w-5 h-5" />
+      <FaGithub className="w-5 h-5" />
+      <button className="bg-black rounded-sm w-5 h-5 cursor-pointer"></button>
     </nav>
   )
 }
