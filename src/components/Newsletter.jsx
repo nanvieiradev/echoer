@@ -25,8 +25,14 @@ export default function Newsletter() {
         Cadastre seu endereço de e-mail para receber novidades e atualizações.
       </Text>
       <Form action="/" className="space-x-3">
-        <Input type="email" placeholder="Endereço de e-mail" />
-        <Button variant="primary">Cadastre-se</Button>
+        <Input
+          type="email"
+          name="email"
+          placeholder="Endereço de e-mail"
+        />
+        <Button type="submit" variant="primary">
+          Cadastre-se
+        </Button>
       </Form>
     </NewsletterSection>
   )
