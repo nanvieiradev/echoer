@@ -1,3 +1,4 @@
+import Link from "next/link"
 import NavbarSocial from "./NavbarSocial"
 
 export default function Footer() {
@@ -6,7 +7,7 @@ export default function Footer() {
       <NavbarSocial />
       <p>
         Feito por{" "}
-        <span className="underline underline-offset-2">Renan Vieira</span>
+        <Link href="/" className="underline underline-offset-2">@nanvieiradev</Link>
       </p>
     </footer>
   )
