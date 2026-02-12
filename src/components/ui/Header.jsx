@@ -13,7 +13,7 @@ export default function Header() {
     <header
       className={`flex justify-between items-center py-9 ${poppins.className}`}
     >
-      <Link href="/" className="mb-6 font-semibold text-3xl">
+      <Link href="/" className="mb-6 font-medium text-3xl">
         Echoer
       </Link>
       <NavbarMenu />
