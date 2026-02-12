@@ -13,6 +13,7 @@ export default function Textarea() {
     <TextAreaWrapper
       cols="30"
       rows="3"
+      maxLength={2000}
       className="focus:outline-2 focus:outline-offset-2 min-h-24.5 max-h-64 transition-colors"
     />
   )

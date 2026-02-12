@@ -29,6 +29,7 @@ export default function Input({
   name,
   placeholder,
   method = "post",
+  maxLength,
   variant = "primary",
 }) {
   return (
@@ -38,6 +39,7 @@ export default function Input({
       placeholder={placeholder}
       method={method}
       variant={variant}
+      maxLength={maxLength}
     />
   )
 }
