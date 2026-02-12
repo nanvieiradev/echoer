@@ -13,7 +13,7 @@ export default function FormField({
   return (
     <div className={`flex flex-col gap-1 ${className}`}>
       <div className="space-x-2 text-sm">
-        <label>{label}</label>
+        <label className="font-light">{label}</label>
         {required && (
           <RequiredText className="font-light">(obrigatório)</RequiredText>
         )}
