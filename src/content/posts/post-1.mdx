@@ -1,8 +1,38 @@
 ---
-title: "Por que escolhi Next ao invés de React?"
+title: "Por que usei Next ao invés de React?"
+author: "Renan Vieira"
 date: "2026-02-10"
 tags: ["Next.js", "Blog"]
-summary: "Explicando como montei meu blog pessoal."
+image: "/images/post-1.jpg"
+sizes: [474, 356]
+summary: "Inicialmente eu quis usar React puro. Depois percebi que algumas necessidades iam além do que React oferece sozinho. Foi aí que o Next.js entrou."
 ---
 
-Este é o conteúdo do meu primeiro post em MDX.
+Quando comecei a planejar meu blog, a primeira ideia foi usar React puro. Afinal, React é uma biblioteca poderosa, flexível e bastante popular. Mas conforme fui desenhando o projeto, percebi que algumas necessidades iam além do que React oferece sozinho. Foi aí que o Next.js entrou como a solução ideal.
+
+<br />
+Um dos pontos mais importantes foi a performance. Com Next.js, eu consigo gerar
+páginas estáticas no momento do build ou renderizá-las no servidor sob demanda.
+Isso significa que meu blog carrega mais rápido, é melhor indexado pelos
+buscadores e oferece uma experiência mais fluida para quem acessa.
+<br />
+No React puro, eu precisaria configurar manualmente bibliotecas como React
+Router. No Next.js, basta criar arquivos dentro da pasta pages e o roteamento já
+está pronto. Isso simplifica muito a organização do projeto e reduz a quantidade
+de código que eu teria que manter.
+<br />
+Como cada post do blog tem uma imagem, o componente next/image foi essencial.
+Ele cuida de otimização automática, lazy loading e diferentes tamanhos de tela
+sem que eu precise escrever lógica extra. Isso garante que as imagens sejam
+leves e responsivas.
+<br />
+Next.js oferece um ambiente pronto para produção: suporte a TypeScript, API
+Routes, integração com CSS-in-JS (como styled-components), além de ferramentas
+de build e deploy simplificadas. Em vez de montar tudo manualmente com React, eu
+já tenho uma estrutura robusta desde o início.
+<br />
+React é excelente para construir interfaces, mas o Next amplia esse poder com
+recursos que facilitam o desenvolvimento de aplicações completas. Para um blog
+que precisa ser rápido, bem indexado e fácil de manter, Next.js foi a escolha
+natural. Assim, eu posso focar no conteúdo e na experiência do usuário, sem me
+preocupar em reinventar a roda.
