@@ -1,8 +1,59 @@
 ---
-title: "De onde vêm esses posts?"
-date: "2026-02-10"
+title: "De onde vêm os posts?"
+author: "Renan Vieira"
+date: "2026-02-11"
 tags: ["Next.js", "Blog"]
-summary: "Explicando como montei meu blog pessoal."
+image: "/images/post-2.jpg"
+sizes: [368, 490]
+summary: "Uma das perguntas mais comuns nesse momento é: “Mas onde ficam os posts?”. A resposta está na forma como organizei o conteúdo usando arquivos MDX."
 ---
 
-Este é o conteúdo do meu primeiro post em MDX.
+Uma das perguntas mais comuns nesse momento é: “Mas onde ficam os posts?”. A resposta está na forma como organizei o conteúdo usando arquivos MDX.
+
+<br />
+MDX é uma extensão do Markdown que permite misturar texto com componentes React.
+Isso significa que cada post pode ter não apenas título, data e corpo do texto,
+mas também elementos interativos, como botões, alertas ou até mesmo gráficos.
+<br />
+Todos os posts ficam dentro da pasta src/content/posts. Cada arquivo tem a
+extensão .mdx e começa com um frontmatter, que é um bloco de metadados escrito
+em YAML. Nele eu defino informações como:
+<br />
+```
+title: "Meu primeiro post"
+author: "Renan Vieira"
+date: "2026-02-12"
+image: "/images/post-2.jpg"
+summary: "Explicando como montei meu blog pessoal."
+image: "/images/post-1.jpg"
+```
+<br />
+Esses dados são usados para montar a listagem de posts e também para exibir detalhes na página individual.
+<br />
+Durante o build, o Next.js usa funções como getStaticProps e getStaticPaths
+para:
+<br />
+• Ler os arquivos .mdx com o módulo fs.
+
+• Extrair os metadados com a
+biblioteca gray-matter.
+
+• Converter o conteúdo em componentes React usando
+next-mdx-remote.
+
+Assim, cada post é transformado em uma página estática, rápida
+e otimizada para SEO.
+<br />
+As vantagens dessa abordagem são:
+<br />
+• **Organização:** todos os posts ficam em uma pasta clara e fácil de manter.
+
+• **Flexibilidade:** posso usar Markdown simples ou incluir componentes React.
+
+• **Performance:** como o conteúdo é gerado estaticamente, o blog carrega rápido e é
+bem indexado.
+<br />
+Os posts não vêm de um banco de dados ou CMS externo. Eles são arquivos .mdx
+dentro do projeto, que o Next.js processa e transforma em páginas prontas. Isso
+me dá controle total sobre o conteúdo e a forma como ele é exibido, mantendo o
+blog simples e eficiente

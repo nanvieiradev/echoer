@@ -1,0 +1,21 @@
+---
+title: "Por que usei Styled Components?"
+author: "Renan Vieira"
+date: "2026-02-12"
+tags: ["Next.js", "Blog"]
+image: "/images/post-3.jpg"
+sizes: [367, 245]
+summary: "Para organizar o design system com flexibilidade e manutenção simples, uni os utilitários do Tailwind ao controle total do Styled Components para encapsular estilos e estruturar a interface com precisão."
+---
+
+Quando comecei a estruturar o design system do blog, eu queria uma forma de organizar os estilos que fosse flexível, escalável e fácil de manter. O Tailwind já me ajudava com utilitários rápidos, mas eu precisava de algo que encapsulasse estilos e me desse controle total sobre a lógica visual. Foi aí que o Styled Components se tornou essencial.
+<br/>
+Com Styled Components, cada componente carrega seus próprios estilos. Isso evita conflitos de CSS globais e garante que o visual de um botão, card ou input seja consistente em qualquer lugar da aplicação.
+<br/>
+Styled Components permite usar um objeto theme centralizado, onde ficam definidos tokens de design como cores, tipografia e espaçamento. Assim, se eu quiser mudar a cor primária do blog, basta alterar no tema e todos os componentes atualizam automaticamente.
+<br/>
+Outra vantagem é poder aplicar estilos com base em props. Por exemplo, um botão pode ter variantes (primary, secondary, danger) sem precisar duplicar código. Isso deixa o design system mais poderoso e fácil de evoluir.
+<br/>
+Eu não precisei abrir mão do Tailwind. Pelo contrário: uso Tailwind para utilitários rápidos (grid, flex, espaçamento) e Styled Components para encapsular estilos e aplicar lógica. Essa combinação me dá o melhor dos dois mundos.
+<br/>
+Styled Components trouxe organização e escalabilidade para o projeto. Ele me permite criar componentes reutilizáveis, com estilos claros e centralizados, sem perder a agilidade que o Tailwind oferece. No fim, o blog ficou mais consistente e fácil de manter, e eu posso evoluir o design sem dor de cabeça.

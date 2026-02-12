@@ -1,21 +1,18 @@
-import styled from "styled-components"
-import Header from "../components/Header"
-// import Footer from "../components/Footer"
+import Footer from "@/components/ui/Footer"
+import Header from "@/components/ui/Header"
+import { Poppins } from "next/font/google"
 
-const PostContainer = styled.div.attrs({
-  className: "min-h-screen flex flex-col bg-white",
-})``
-
-const Content = styled.article.attrs({
-  className: "flex-1 max-w-3xl mx-auto px-6 py-10 prose",
-})``
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+})
 
 export default function PostLayout({ children }) {
   return (
-    <PostContainer>
+    <>
       <Header />
-      <Content>{children}</Content>
-      {/* <Footer /> */}
-    </PostContainer>
+      <main className={`${poppins.className}`}>{children}</main>
+      <Footer />
+    </>
   )
 }
