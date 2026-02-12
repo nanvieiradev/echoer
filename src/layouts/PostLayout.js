@@ -1,11 +1,17 @@
-import Header from "../components/Header"
-import Footer from "../components/Footer"
+import Footer from "@/components/ui/Footer"
+import Header from "@/components/ui/Header"
+import { Poppins } from "next/font/google"
+
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+})
 
 export default function PostLayout({ children }) {
   return (
     <>
       <Header />
-      <main>{children}</main>
+      <main className={`${poppins.className}`}>{children}</main>
       <Footer />
     </>
   )
