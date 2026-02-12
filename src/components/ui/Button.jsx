@@ -1,22 +1,22 @@
 import styled, { css } from "styled-components"
 
-// 1. Definição das variantes em um objeto separado para facilitar a manutenção
 const buttonVariants = {
-  primary: css`
+  default: css`
     background-color: ${({ theme }) => theme.colors.foreground};
     border-color: ${({ theme }) => theme.colors.primary};
     color: ${({ theme }) => theme.colors.primary};
+    outline-color: ${({ theme }) => theme.colors.primary};
     &:hover {
       background-color: ${({ theme }) => theme.colors.primary};
       color: ${({ theme }) => theme.colors.foreground};
     }
   `,
-  secondary: css`
-    background-color: ${({ theme }) => theme.colors.secondary};
+  primary: css`
+    background-color: ${({ theme }) => theme.colors.foreground};
     border-color: ${({ theme }) => theme.colors.secondary};
-    color: ${({ theme }) => theme.colors.foreground};
+    color: ${({ theme }) => theme.colors.input};
     &:hover {
-      background-color: ${({ theme }) => theme.colors.foreground};
+      background-color: ${({ theme }) => theme.colors.primary};
       color: ${({ theme }) => theme.colors.secondary};
     }
   `,
@@ -24,9 +24,10 @@ const buttonVariants = {
     background-color: transparent;
     border-color: ${({ theme }) => theme.colors.foreground};
     color: ${({ theme }) => theme.colors.foreground};
+    outline-color: ${({ theme }) => theme.colors.foreground};
     &:hover {
-      background-color: ${({ theme }) => theme.colors.primary};
-      color: ${({ theme }) => theme.colors.foreground};
+      background-color: ${({ theme }) => theme.colors.foreground};
+      color: ${({ theme }) => theme.colors.input};
     }
   `,
   danger: css`
@@ -42,9 +43,9 @@ const buttonVariants = {
 
 // 2. Componente principal
 const Button = styled.button.attrs({
-  className: "px-10 py-5 border-2 font-medium transition-colors cursor-pointer",
+  className:
+    "px-8 py-5 border-2 font-medium transition-colors cursor-pointer active:brightness-80 focus:outline-2 focus:outline-offset-2",
 })`
-  /* Estilos Base / Default */
   background-color: ${({ theme }) => theme.colors.foreground};
   color: ${({ theme }) => theme.colors.background};
   border-color: ${({ theme }) => theme.colors.foreground};
@@ -54,8 +55,7 @@ const Button = styled.button.attrs({
     color: ${({ theme }) => theme.colors.foreground};
   }
 
-  /* 3. Aplicação dinâmica da variante */
-  ${({ variant }) => buttonVariants[variant] || ""}
+  ${({ variant }) => buttonVariants[variant] || buttonVariants["default"]}
 `
 
 export default Button
