@@ -7,7 +7,7 @@ const NewsletterSection = styled.section`
   background-color: ${({ theme }) => theme.colors.foreground};
 `
 
-const Title = styled.h2`
+const Title = styled.h1`
   color: ${({ theme }) => theme.colors.primary};
 `
 
@@ -18,7 +18,7 @@ const Text = styled.p`
 export default function Newsletter() {
   return (
     <NewsletterSection className="flex flex-col items-center gap-12 py-32 text-center">
-      <Title className="mb-9 font-medium text-4xl">
+      <Title className="mb-9 font-medium text-5xl">
         Assine nossa newsletter.
       </Title>
       <Text className="max-w-xl font-light text-lg">
