@@ -5,5 +5,6 @@ export const theme = {
     primary: "#ffc700",
     muted: "#383838",
     input: "#ffffff",
+    ring: "#a9a9a9",
   },
 }
