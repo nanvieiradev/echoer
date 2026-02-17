@@ -1,7 +1,9 @@
 import Link from "next/link"
 import { IconContext } from "react-icons"
-import { FaLinkedinIn, FaGithub } from "react-icons/fa"
+import { FaLinkedinIn } from "react-icons/fa"
 import { useTheme } from "styled-components"
+import { AiFillInstagram } from "react-icons/ai"
+import { FaGithubAlt } from "react-icons/fa"
 
 export default function NavbarSocial({ className }) {
   const theme = useTheme()
@@ -13,14 +15,16 @@ export default function NavbarSocial({ className }) {
         className: "global-class-name",
       }}
     >
-      <nav className={`${className} flex space-x-6`}>
-        <Link href="/">
-          <FaLinkedinIn className="w-6 sm:w-5 h-6 sm:h-5" />
+      <nav className={`${className} flex space-x-5 sm:space-x-6`}>
+        <Link href="instagram.com/nanvieiradev">
+          <AiFillInstagram className="w-6 h-6" />
         </Link>
-        <Link href="/">
-          <FaGithub className="w-6 sm:w-5 h-6 sm:h-5" />
+        <Link href="linkedin.com/in/nanvieiradev">
+          <FaLinkedinIn className="w-6 h-6" />
         </Link>
-        <button className="bg-black rounded-sm w-6 sm:w-5 h-6 sm:h-5 cursor-pointer"></button>
+        <Link href="github.com/nanvieiradev">
+          <FaGithubAlt className="w-6 h-6" />
+        </Link>
       </nav>
     </IconContext.Provider>
   )
