@@ -15,12 +15,12 @@ export default function NavbarSocial({ className }) {
     >
       <nav className={`${className} flex space-x-6`}>
         <Link href="/">
-          <FaLinkedinIn className="w-5 h-5" />
+          <FaLinkedinIn className="w-6 sm:w-5 h-6 sm:h-5" />
         </Link>
         <Link href="/">
-          <FaGithub className="w-5 h-5" />
+          <FaGithub className="w-6 sm:w-5 h-6 sm:h-5" />
         </Link>
-        <button className="bg-black rounded-sm w-5 h-5 cursor-pointer"></button>
+        <button className="bg-black rounded-sm w-6 sm:w-5 h-6 sm:h-5 cursor-pointer"></button>
       </nav>
     </IconContext.Provider>
   )
