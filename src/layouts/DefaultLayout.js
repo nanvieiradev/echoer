@@ -10,9 +10,9 @@ const poppins = Poppins({
 export default function DefaultLayout({ className, children }) {
   return (
     <>
-      <Header />      
-      {/* <main className={`${poppins.className} ${className}`}>{children}</main>
-      <Footer /> */}
+      <Header />
+      <main className={`${poppins.className} ${className}`}>{children}</main>
+      <Footer />
     </>
   )
 }
