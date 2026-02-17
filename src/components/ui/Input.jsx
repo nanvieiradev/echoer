@@ -31,6 +31,7 @@ export default function Input({
   method = "post",
   maxLength,
   variant = "primary",
+  className,
 }) {
   return (
     <InputField
@@ -40,6 +41,7 @@ export default function Input({
       method={method}
       variant={variant}
       maxLength={maxLength}
+      className={className}
     />
   )
 }
