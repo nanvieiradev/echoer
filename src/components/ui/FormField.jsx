@@ -12,10 +12,13 @@ export default function FormField({
 }) {
   return (
     <div className={`flex flex-col gap-1 ${className}`}>
-      <div className="space-x-2 text-sm">
+      <div className="flex flex-wrap space-x-2 text-sm">
         <label className="font-light">{label}</label>
         {required && (
-          <RequiredText className="font-light">(obrigatório)</RequiredText>
+          <>
+            <RequiredText className="hidden sm:block font-light">(obrigatório)</RequiredText>
+            <RequiredText className="sm:hidden font-light">*</RequiredText>
+          </>
         )}
       </div>
       {children}

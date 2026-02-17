@@ -5,6 +5,7 @@ import Input from "@/components/ui/Input"
 import FormField from "@/components/ui/FormField"
 import Textarea from "@/components/ui/Textarea"
 import Button from "@/components/ui/Button"
+import NavbarSocial from "@/components/ui/NavbarSocial"
 
 export default function Contact() {
   return (
@@ -12,13 +13,13 @@ export default function Contact() {
       <Head>
         <title>Echoer</title>
       </Head>
-      <DefaultLayout className="h-[calc(100vh-392px)]">
-        <section className="grid grid-cols-2 gap-48 h-full py-20">
-          <div className="flex flex-col gap-8">
-            <h2 className="text-4xl font-medium leading-14">
+      <DefaultLayout className="lg:h-[calc(100vh-392px)]">
+        <section className="grid grid-cols-1 lg:grid-cols-2 gap-x-24 xl:gap-x-48 h-full py-6 lg:py-20 gap-y-12">
+          <div className="flex flex-col gap-7">
+            <h2 className="text-3xl lg:text-4xl font-medium leading-10 md:leading-14">
               Queremos saber sua opinião.
             </h2>
-            <p className="font-light leading-7">
+            <p className="font-light leading-7 lg:text-lg max-w-2xl lg:max-w-max">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -31,6 +32,7 @@ export default function Contact() {
                 (55) 55555-5555
               </h3>
             </div>
+            <NavbarSocial className="lg:hidden"/>
           </div>
           <div className="flex flex-col gap-8 justify-center">
             <Form action="/" formMethod="post" className="space-y-4">

@@ -1,9 +1,10 @@
 import Link from "next/link"
 import { useState } from "react"
-import { FaLinkedinIn, FaGithub } from "react-icons/fa"
+import { AiFillInstagram } from "react-icons/ai"
+import { FaLinkedinIn, FaGithub, FaGithubAlt } from "react-icons/fa"
 import styled from "styled-components"
 
-const MobileMenuWrapper = styled.div`
+const MobileMenuWrapper = styled.nav`
   background-color: ${({ theme }) => theme.colors.background};
   color: ${({ theme }) => theme.colors.foreground};
 `
@@ -11,7 +12,9 @@ const MobileMenuWrapper = styled.div`
 export default function MobileMenu() {
   const [isOpen, setIsOpen] = useState(false)
   return (
-    <nav className="sm:hidden flex flex-wrap justify-between items-center w-full">
+    <MobileMenuWrapper
+      className={`${isOpen ? "fixed px-4 py-6" : "static"} sm:hidden top-0 left-0  flex flex-wrap justify-between items-center  w-full`}
+    >
       <Link href="/">
         <span className="font-medium text-2xl whitespace-nowrap">Echoer</span>
       </Link>
@@ -39,12 +42,12 @@ export default function MobileMenu() {
           />
         </svg>
       </button>
-      <MobileMenuWrapper
-        className={`${isOpen ? "block" : "hidden"} w-full h-[calc(100vh-88px)] absolute  top-22 left-0`}
+      <div
+        className={`${isOpen ? "block" : "hidden"} w-full h-[calc(100vh-88px)] top-22 left-0`}
         id="navbar-hamburgerx"
       >
         <div className="flex flex-col justify-between items-center py-6 w-full h-full">
-          <ul className="flex flex-col items-center space-y-2 bg-neutral-secondary-soft mt-60 py-6 border-default w-full font-light text-3xl">
+          <ul className="flex flex-col items-center space-y-2 mt-60 py-6 w-full font-light text-3xl">
             <li>
               <Link
                 href="/"
@@ -56,7 +59,7 @@ export default function MobileMenu() {
             </li>
             <li>
               <Link
-                href="/"
+                href="/about"
                 className="block px-3 py-2 decoration-2 active:underline underline-offset-8"
               >
                 Sobre
@@ -64,24 +67,26 @@ export default function MobileMenu() {
             </li>
             <li>
               <Link
-                href="/"
+                href="/contact"
                 className="block px-3 py-2 decoration-2 active:underline underline-offset-8"
               >
                 Contato
               </Link>
             </li>
           </ul>
-          <nav className={`flex gap-6`}>
-            <Link href="/">
+          <nav className={`flex space-x-5 sm:space-x-6`}>
+            <Link href="instagram.com/nanvieiradev">
+              <AiFillInstagram className="w-6 h-6" />
+            </Link>
+            <Link href="linkedin.com/in/nanvieiradev">
               <FaLinkedinIn className="w-6 h-6" />
             </Link>
-            <Link href="/">
-              <FaGithub className="w-6 h-6" />
+            <Link href="github.com/nanvieiradev">
+              <FaGithubAlt className="w-6 h-6" />
             </Link>
-            <button className="bg-black rounded-sm w-6 h-6 cursor-pointer"></button>
           </nav>
         </div>
-      </MobileMenuWrapper>
-    </nav>
+      </div>
+    </MobileMenuWrapper>
   )
 }
