@@ -10,7 +10,7 @@ const poppins = Poppins({
 export default function Footer() {
   return (
     <footer
-      className={`flex flex-col items-center gap-6 py-24 ${poppins.className}`}
+      className={`flex flex-col items-center gap-9 sm:gap-6 py-24 ${poppins.className}`}
     >
       <NavbarSocial />
       <p>

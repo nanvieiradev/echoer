@@ -1,10 +1,14 @@
 import Link from "next/link"
 import { useState } from "react"
 import { FaLinkedinIn, FaGithub } from "react-icons/fa"
-import { useTheme } from "styled-components"
+import styled from "styled-components"
+
+const MobileMenuWrapper = styled.div`
+  background-color: ${({ theme }) => theme.colors.background};
+  color: ${({ theme }) => theme.colors.foreground};
+`
 
 export default function MobileMenu() {
-  const theme = useTheme()
   const [isOpen, setIsOpen] = useState(false)
   return (
     <nav className="sm:hidden flex flex-wrap justify-between items-center w-full">
@@ -35,11 +39,11 @@ export default function MobileMenu() {
           />
         </svg>
       </button>
-      <div
-        className={`${isOpen ? "block" : "hidden"} w-full h-[calc(100vh-88px)] `}
-        id="navbar-hamburger"
+      <MobileMenuWrapper
+        className={`${isOpen ? "block" : "hidden"} w-full h-[calc(100vh-88px)] absolute  top-22 left-0`}
+        id="navbar-hamburgerx"
       >
-        <div className="flex flex-col justify-between items-center w-full h-full">
+        <div className="flex flex-col justify-between items-center py-6 w-full h-full">
           <ul className="flex flex-col items-center space-y-2 bg-neutral-secondary-soft mt-60 py-6 border-default w-full font-light text-3xl">
             <li>
               <Link
@@ -77,7 +81,7 @@ export default function MobileMenu() {
             <button className="bg-black rounded-sm w-6 h-6 cursor-pointer"></button>
           </nav>
         </div>
-      </div>
+      </MobileMenuWrapper>
     </nav>
   )
 }
