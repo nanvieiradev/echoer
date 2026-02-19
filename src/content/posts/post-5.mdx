@@ -1,0 +1,15 @@
+---
+title: "Como funcionam as abas dos posts?"
+author: "Renan Vieira"
+date: "2026-02-19"
+tags: ["Next.js", "Blog"]
+image: "/images/post-5.png"
+summary: "Existe um sistema de navegação que permite avançar para o próximo post ou voltar para o anterior. Isso é feito através de duas variáveis chamadas prevPost e nextPost, que são calculadas durante o processo de build do site."
+---
+Neste blog, cada publicação não está isolada: existe um sistema de navegação que permite avançar para o próximo post ou voltar para o anterior. Isso é feito através de duas variáveis chamadas prevPost e nextPost, que são calculadas durante o processo de build do site.
+<br/>
+Quando o Next.js gera as páginas, ele lê todos os arquivos de posts dentro da pasta de conteúdo e os organiza por data. Em seguida, identifica qual é o índice do post atual dentro dessa lista ordenada. Com base nesse índice, o código descobre qual é o post anterior e qual é o próximo. Se houver um post antes, ele é atribuído à variável prevPost; se houver um depois, ele é atribuído à variável nextPost. Caso contrário, o valor é null, e a aba correspondente não aparece.
+<br/>
+Na interface, essas variáveis são usadas para renderizar links de navegação. Se prevPost existir, aparece um link para o post anterior com o título dele. Se nextPost existir, aparece um link para o próximo post. Dessa forma, o leitor pode percorrer os artigos de maneira sequencial, sem precisar voltar para a página inicial.
+<br/>
+Esse sistema de abas garante uma experiência de leitura mais fluida, permitindo que o visitante explore o conteúdo como se estivesse folheando um livro, indo de capítulo em capítulo. É uma solução simples, mas poderosa, que aproveita os recursos de geração estática do Next.js para criar uma navegação intuitiva entre os posts.
