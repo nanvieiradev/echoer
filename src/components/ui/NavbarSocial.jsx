@@ -16,13 +16,13 @@ export default function NavbarSocial({ className }) {
       }}
     >
       <nav className={`${className} flex space-x-5 sm:space-x-6`}>
-        <Link href="instagram.com/nanvieiradev">
+        <Link href="https://instagram.com/nanvieiradev" target="_blank">
           <AiFillInstagram className="w-6 h-6" />
         </Link>
-        <Link href="linkedin.com/in/nanvieiradev">
+        <Link href="https://linkedin.com/in/nanvieiradev" target="_blank">
           <FaLinkedinIn className="w-6 h-6" />
         </Link>
-        <Link href="github.com/nanvieiradev">
+        <Link href="https://github.com/nanvieiradev" target="_blank">
           <FaGithubAlt className="w-6 h-6" />
         </Link>
       </nav>
