@@ -13,7 +13,7 @@ export default function MobileMenu() {
   const [isOpen, setIsOpen] = useState(false)
   return (
     <MobileMenuWrapper
-      className={`${isOpen ? "fixed px-4 py-6" : "static"} sm:hidden top-0 left-0  flex flex-wrap justify-between items-center  w-full`}
+      className={`${isOpen ? "fixed p-6" : "static"} sm:hidden top-0 left-0  flex flex-wrap justify-between items-center  w-full`}
     >
       <Link href="/">
         <span className="font-medium text-2xl whitespace-nowrap">Echoer</span>
@@ -75,13 +75,13 @@ export default function MobileMenu() {
             </li>
           </ul>
           <nav className={`flex space-x-5 sm:space-x-6`}>
-            <Link href="instagram.com/nanvieiradev">
+            <Link href="instagram.com/nanvieiradev" target="_blank">
               <AiFillInstagram className="w-6 h-6" />
             </Link>
-            <Link href="linkedin.com/in/nanvieiradev">
+            <Link href="linkedin.com/in/nanvieiradev" target="_blank">
               <FaLinkedinIn className="w-6 h-6" />
             </Link>
-            <Link href="github.com/nanvieiradev">
+            <Link href="github.com/nanvieiradev" target="_blank">
               <FaGithubAlt className="w-6 h-6" />
             </Link>
           </nav>
