@@ -8,13 +8,14 @@ const TextAreaWrapper = styled.textarea`
   font-size: 1rem;
 `
 
-export default function Textarea() {
+export default function Textarea({ className, placeholder }) {
   return (
     <TextAreaWrapper
       cols="30"
       rows="3"
       maxLength={2000}
-      className="focus:outline-2 focus:outline-offset-2 min-h-24.5 max-h-64 transition-colors"
+      placeholder={placeholder}
+      className={`block focus:outline-2 focus:outline-offset-2 min-h-24.5 max-h-64 transition-colors ${className}`}
     />
   )
 }
