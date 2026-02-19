@@ -6,7 +6,10 @@ export default function PostList({ posts }) {
   )
 
   return (
-    <section className="gap-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 py-16" id="posts">
+    <section
+      className="gap-x-8 gap-y-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 sm:py-16 pb-16 sm:pb-16"
+      id="posts"
+    >
       {sortedPosts.map((post) => (
         <Post key={post.slug} post={post} />
       ))}
